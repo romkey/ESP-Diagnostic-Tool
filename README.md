@@ -5,7 +5,7 @@ This is a small set of diagnostics and debugging tools for the ESP8266. It's mea
 The utility includes Wifi and I2C scanners and can report basic information about the board you're using.
 
 
-##Usage:
+## Usage:
 
 The utility runs the serial port at 115,200 bps. You'll want to use some kind of terminal program to interact with it.
 
@@ -21,7 +21,7 @@ Hello World
 0. Restart
 ```
 
-###1 Show ESP Infiormation
+### 1 Show ESP Infiormation
 
 This shows information about the ESP SDK and Arduino core that the utility was built with as well as information about the CPU it's running on.
 
@@ -38,13 +38,13 @@ Free sketch space 2867200
 Reset reason External System
 ```
 
-###2 Enter Wifi credentials
+### 2 Enter Wifi credentials
 
 You'll enter an SSID and password, each up to 64 characters, ending with the RETURN key. You can use backspace or delete to go back a character.
 
 The SSID and password are not stored in flash and should not persist across reboots.
 
-###3 Connect to wifi network
+### 3 Connect to wifi network
 
 This item will attempt to connect the ESP to a wifi network or will disconnect from the current network. You must enter wifi credentials before you can connect.
 
@@ -81,7 +81,7 @@ WiFi connected
 
 
 
-###4 Current wifi info
+### 4 Current wifi info
 
 When connect to a wifi network, this will show how the ESP was configured by DHCP and the RSSI for the wifi network. It will always show you the ESP's MAC address.
 
@@ -98,7 +98,7 @@ RSSi -51
 ```
 
 
-###5 Scan wifi networks
+### 5 Scan wifi networks
 
 This will show you a list of wifi networks that the ESP can currently see. The list may seem very random. Only nearby access points will show up reliably.
 
@@ -117,11 +117,11 @@ The list needs a lot of work and should eventually be stored in flash and not in
 
 There is no SPI scanner. SPI devices are individually selected - SPI doesn't have addresses. Which leaves us no way to scan for SPI devices. So, no SPI scanner; sorry.
 
-###0 Restart
+### 0 Restart
 
 Resets the ESP. It should very quickly restart and present the menu again.
 
-###H, ? and Newline
+### H, ? and Newline
 
 These will all re-display the menu.
 
