@@ -135,6 +135,34 @@ It also contains a list of known I2C devices by address and will report the know
 
 The list needs a lot of work and should eventually be stored in flash and not in the heap.
 
+An I2C scan with no I2C device should look like this:
+```
+Scanning...
+No I2C devices found
+```
+
+A successful I2C scan might look like this:
+```
+Scanning...  
+I2C device found at address 0x13
+at 0x13 found Si4713 (FM transmitter)
+I2C device found at address 0x5b
+I2C device found at address 0x76
+done
+```
+
+An I2C scan with malfunctioning hardware might look like this:
+```
+Scanning...  
+Unknown error at address 0x01
+Unknown error at address 0x02
+Unknown error at address 0x03 
+Unknown error at address 0x04
+...
+```
+
+This means something is interfering with signalling on the I2C SDA and SDC lines. It's most likely an electrical or wiring problem but could possibly be a defective I2C device.
+
 
 #### SPI Scanner
 
