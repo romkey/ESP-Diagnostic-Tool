@@ -104,6 +104,29 @@ This will show you a list of wifi networks that the ESP can currently see. The l
 
 Remember that current ESPs are 2.4GHz devices. They support 802.11b/g/n but only the 2.4GHz band for n. They will never be able to see 5GHz 802.11a, 802.11n or 802.11ac networks.
 
+Scan network output will look like this:
+```
+About to scan wifi networks
+
+Wifi scan done
+10 networks found
+                            SSID CHN RSS        MAC address Encryption
+                       HOME-2001   1 -84  E8:3E:FC:23:23:23 WPA/WPA2/PSK
+   you better know your dumplng   1 -58  44:D9:E7:23:23:23 CCMP
+                 CenturyLink2061   1 -92  58:8B:F3:23:23:23 WPA/WPA2/PSK
+                       NETGEAR69   3 -35  9C:3D:CF:23:23:23 CCMP
+  HP-Print-28-Officejet Pro 8600   4 -87  A0:D3:C1:23:23:23 none
+              extra cashew sauce   4 -66  8C:3B:AD:23:23:23 CCMP
+      tell me about the dumpling   5 -53  80:2A:A8:23:23:23 CCMP
+                     xfinitywifi   6 -93  F6:AA:A0:23:23:23 none
+                  BAKINGINDAKITC   6 -92  EC:AA:A0:23:23:23 CCMP
+			  Internet of Dumplings  11 -52  88:1F:A1:23:23:23 WPA/WPA2/PSK
+```
+
+The MAC address is the MAC address of the access point.
+
+Encryption will be [WEP](https://en.wikipedia.org/wiki/Wired_Equivalent_Privacy), [TKIP](https://en.wikipedia.org/wiki/Temporal_Key_Integrity_Protocol), [CCMP](https://en.wikipedia.org/wiki/CCMP_(cryptography)), [WPA/WPA2/PSK](https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access) or none.
+
 ### 6 I2C Scanner
 
 The I2C scanner probes each I2C address and reports which addresses respond.
