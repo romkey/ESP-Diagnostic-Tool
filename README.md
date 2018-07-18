@@ -120,7 +120,7 @@ Wifi scan done
       tell me about the dumpling   5 -53  80:2A:A8:23:23:23 CCMP
                      xfinitywifi   6 -93  F6:AA:A0:23:23:23 none
                   BAKINGINDAKITC   6 -92  EC:AA:A0:23:23:23 CCMP
-			  Internet of Dumplings  11 -52  88:1F:A1:23:23:23 WPA/WPA2/PSK
+           Internet of Dumplings  11 -52  88:1F:A1:23:23:23 WPA/WPA2/PSK
 ```
 
 The MAC address is the MAC address of the access point.
