@@ -112,7 +112,7 @@ Wifi scan done
 10 networks found
                             SSID CHN RSS        MAC address Encryption
                        HOME-2001   1 -84  E8:3E:FC:23:23:23 WPA/WPA2/PSK
-   you better know your dumplng   1 -58  44:D9:E7:23:23:23 CCMP
+    you better know your dumplng   1 -58  44:D9:E7:23:23:23 CCMP
                  CenturyLink2061   1 -92  58:8B:F3:23:23:23 WPA/WPA2/PSK
                        NETGEAR69   3 -35  9C:3D:CF:23:23:23 CCMP
   HP-Print-28-Officejet Pro 8600   4 -87  A0:D3:C1:23:23:23 none
