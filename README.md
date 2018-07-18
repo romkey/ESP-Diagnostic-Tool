@@ -170,3 +170,7 @@ The utility has very limited ESP32 support. It can't currently report Wifi event
 7. Improve ESP32 support
 
 8. ESP32 Bluetooth scanning?
+
+## License
+
+This code is published under the [MIT License](https://romkey.mit-license.org/).
