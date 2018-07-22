@@ -119,7 +119,9 @@ void wifi_info() {
   else
     Serial.println("Not connected");
 
+#ifndef ESP32
   Serial.println(String("Hostname ") + WiFi.hostname());
+#endif
   Serial.println(String("MAC address ") + WiFi.macAddress());
 
   if(WiFi.status() == WL_CONNECTED) {

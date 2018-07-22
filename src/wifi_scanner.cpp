@@ -7,6 +7,12 @@
 #endif
 
 static const char* wifi_enc_type(int code) {
+#ifdef ESP32
+  static char buf[6];
+  snprintf(buf, 6, "%d", code);
+  return buf;
+#else
+
   switch(code) {
   case ENC_TYPE_WEP:
     return "WEP";
@@ -21,6 +27,7 @@ static const char* wifi_enc_type(int code) {
   default:
     return "unknown";
   }
+#endif
 }
 
 

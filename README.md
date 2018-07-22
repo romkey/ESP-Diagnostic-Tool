@@ -202,7 +202,7 @@ If you missed the menu try typing `?` or `h` to see it.
 
 ## ESP32 Support
 
-The utility has very limited ESP32 support. It can't currently report Wifi events and can't
+The utility has very limited ESP32 support. It can't currently report Wifi events and can't give much information about the board.
 
 ## Roadmap
 

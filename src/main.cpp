@@ -11,6 +11,11 @@ ADC_MODE(ADC_VCC);
 #endif
 
 void i2c_begin(), i2c_scan(), blink_start(int), wifi_begin(), wifi_scan(), wifi_info(), esp_output(), wifi_disconnect(), wifi_connect(const char*, const char*);
+
+#ifdef ESP32
+void ble_scan();
+#endif
+
 bool wifi_connected();
 
 void output_menu() {
@@ -26,18 +31,22 @@ void output_menu() {
   Serial.println("4. Current wifi info");
   Serial.println("5. Scan wifi networks");
   Serial.println("6. Scan I2C devices");
+#ifdef ESP32
+  Serial.println("7. Scan BLE devices");
+#endif
   Serial.println("0. Restart");
 }
 
 
 void setup(){
-  wifi_begin();
-  i2c_begin();
-
   Serial.begin(115200);
+  Serial.setDebugOutput(true);
   Serial.println();
   Serial.println();
   Serial.println("Hello World");
+
+  wifi_begin();
+  i2c_begin();
 
   output_menu();
 }
@@ -95,6 +104,11 @@ void loop() {
       i2c_scan();
       break;
 
+#ifdef ESP32
+    case '7':
+      ble_scan();
+      break;
+#endif
     case '0':
       Serial.println("RESTART ESP");
       ESP.restart();
