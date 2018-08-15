@@ -31,7 +31,7 @@ void output_menu() {
   Serial.println("4. Current wifi info");
   Serial.println("5. Scan wifi networks");
   Serial.println("6. Scan I2C devices");
-#ifdef ESP32
+#if 0
   Serial.println("7. Scan BLE devices");
 #endif
   Serial.println("0. Restart");
@@ -104,11 +104,13 @@ void loop() {
       i2c_scan();
       break;
 
-#ifdef ESP32
+#if 0
     case '7':
-      ble_scan();
+      void SampleScan();
+      SampleScan();
       break;
 #endif
+
     case '0':
       Serial.println("RESTART ESP");
       ESP.restart();
