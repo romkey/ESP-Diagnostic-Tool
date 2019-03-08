@@ -1,4 +1,4 @@
-# ESP8266 Diagnostic Utility
+# ESP8266/ESP32 Diagnostic Utility
 
 This is a small set of diagnostics and debugging tools for the ESP8266. It's meant to help solve problems around Wifi and I2C.
 
