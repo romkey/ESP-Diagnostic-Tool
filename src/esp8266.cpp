@@ -1,5 +1,9 @@
 #include <Arduino.h>
-#include <ESP.h>
+#include <Esp.h>
+
+extern "C" {
+#include <lwipopts.h>
+};
 
 #ifndef ESP32
 
@@ -20,6 +24,8 @@ void esp_output() {
   Serial.printf("Free sketch space %d\n", ESP.getFreeSketchSpace());
   Serial.printf("Reset reason %s\n", ESP.getResetReason().c_str());
 #endif
+
+  Serial.printf("Maximum TCP connections %d\n", MEMP_NUM_TCP_PCB);
 
   Serial.println();
   Serial.println();

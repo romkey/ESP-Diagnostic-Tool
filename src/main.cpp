@@ -12,10 +12,6 @@ ADC_MODE(ADC_VCC);
 
 void i2c_begin(), i2c_scan(), blink_start(int), wifi_begin(), wifi_scan(), wifi_info(), esp_output(), wifi_disconnect(), wifi_connect(const char*, const char*);
 
-#ifdef ESP32
-void ble_scan();
-#endif
-
 bool wifi_connected();
 
 void output_menu() {
@@ -40,10 +36,13 @@ void output_menu() {
 
 void setup(){
   Serial.begin(115200);
-  Serial.setDebugOutput(true);
+
+  //  Serial.setDebugOutput(true);
   Serial.println();
   Serial.println();
   Serial.println("Hello World");
+  delay(5000);
+
 
   wifi_begin();
   i2c_begin();
