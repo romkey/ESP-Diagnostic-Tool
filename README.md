@@ -244,6 +244,12 @@ Bluetooth support looks problematic. The [Bluetooth library is so large](https:/
 
 8. ESP32 Bluetooth scanning? (not likely due to Bluetooth library size issues)
 
+9. Add telnet/netcat-like functionality
+
+10. Blink
+
+11. Look at adding some kind of SSL testing
+
 ## License
 
 This code is published under the [MIT License](https://romkey.mit-license.org/).
