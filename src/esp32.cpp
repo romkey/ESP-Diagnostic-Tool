@@ -1,7 +1,8 @@
+#ifdef ESP32
+
 #include <Arduino.h>
 #include <Esp.h>
 
-#ifdef ESP32
 
 extern "C" {
 #include "soc/efuse_reg.h"

@@ -1,3 +1,5 @@
+#ifdef ESP8266
+
 #include <Arduino.h>
 #include <Esp.h>
 
@@ -30,5 +32,7 @@ void esp_output() {
   Serial.println();
   Serial.println();
 }
+
+#endif
 
 #endif
