@@ -21,7 +21,7 @@ Hello World
 0. Restart
 ```
 
-### 1 Show ESP Infiormation
+### 1 Show ESP Information
 
 This shows information about the ESP SDK and Arduino core that the utility was built with as well as information about the CPU it's running on.
 
