@@ -16,4 +16,4 @@ before_script:
     - cp .travis.config.h src/config.h
 
 script:
-    - platformio run -e lolin32
+    - platformio run
