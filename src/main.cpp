@@ -1,10 +1,14 @@
 #include <Arduino.h>
 
+#include "one_wire.h"
+
 #define MAX_WIFI_SSID_LENGTH 64
 #define MAX_WIFI_PASSWORD_LENGTH 64
 
 static char wifi_ssid[MAX_WIFI_SSID_LENGTH+1]         = "";
 static char wifi_password[MAX_WIFI_PASSWORD_LENGTH+1] = "";
+
+static uint8_t one_wire_pin = 0xff;
 
 #ifdef ADC_MODE
 ADC_MODE(ADC_VCC);
@@ -30,6 +34,7 @@ void output_menu() {
 #if 0
   Serial.println("7. Scan BLE devices");
 #endif
+  Serial.println("8. Scan 1 Wire devices");
   Serial.println("0. Restart");
 }
 
@@ -51,6 +56,7 @@ void setup(){
 }
 
 void input_wifi_credentials();
+void input_one_wire_pin();
 
 void loop() {
   if (Serial.available() > 0) {
@@ -109,6 +115,11 @@ void loop() {
       SampleScan();
       break;
 #endif
+
+    case '8':
+      input_one_wire_pin();
+      one_wire_scan(one_wire_pin);
+      break;
 
     case '0':
       Serial.println("RESTART ESP");
@@ -191,3 +202,22 @@ void input_wifi_credentials() {
   Serial.println();
   Serial.println();
 }
+
+void input_one_wire_pin() {
+  char pin_number[5];
+
+  Serial.println("Enter pin number for OneWire data");
+
+  serial_read_line(pin_number, 4);
+
+  Serial.println();
+  Serial.println();
+
+  one_wire_pin = atoi(pin_number);
+  Serial.printf("OneWire pin number %d\n", one_wire_pin);
+  Serial.println("Remember to connect a 4.7K resistor between VCC and OneWire data!\n");
+
+  Serial.println();
+  Serial.println();
+}
+
