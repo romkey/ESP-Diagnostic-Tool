@@ -1,5 +1,7 @@
 # ESP8266/ESP32 Diagnostic Utility
 
+[![Build Status](https://travis-ci.com/romkey/ESP-Diagnostic-Tool.svg?branch=master)](https://travis-ci.com/romkey/ESP-Diagnostic-Tool)
+
 This is a small set of diagnostics and debugging tools for the ESP8266. It's meant to help solve problems around Wifi and I2C.
 
 The utility includes Wifi and I2C scanners and can report basic information about the board you're using.
