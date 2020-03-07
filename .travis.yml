@@ -12,8 +12,5 @@ install:
     - platformio update
     - platformio lib install
 
-before_script:
-    - cp .travis.config.h src/config.h
-
 script:
     - platformio run
