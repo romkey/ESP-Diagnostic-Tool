@@ -1,6 +1,7 @@
 # Platformio-related
 .pioenvs
 .piolibdeps
+.pio
 
 # Prerequisites
 *.d
