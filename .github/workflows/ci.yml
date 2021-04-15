@@ -39,9 +39,6 @@ jobs:
     - name: Install library dependencies
       run: pio lib install
       
-    - name: set up config.h
-      run: cp src/config.h-example src/config.h
-
     - name: Run PlatformIO
       run: pio run
       env:
