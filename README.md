@@ -1,6 +1,6 @@
 # ESP8266/ESP32 Diagnostic Utility
 
-[![Build Status](https://travis-ci.com/romkey/ESP-Diagnostic-Tool.svg?branch=master)](https://travis-ci.com/romkey/ESP-Diagnostic-Tool)
+[![PlatformIO CI](https://github.com/romkey/ESP-Diagnostic-Tool/actions/workflows/ci.yml/badge.svg)](https://github.com/romkey/ESP-Diagnostic-Tool/actions/workflows/ci.yml)
 
 This is a small set of diagnostics and debugging tools for the ESP8266. It's meant to help solve problems around Wifi and I2C.
 
