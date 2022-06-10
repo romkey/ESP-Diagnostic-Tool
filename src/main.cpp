@@ -34,7 +34,7 @@ void output_menu() {
 #if 0
   Serial.println("7. Scan BLE devices");
 #endif
-  Serial.println("8. Scan 1 Wire devices");
+  //  Serial.println("8. Scan 1 Wire devices");
   Serial.println("0. Restart");
 }
 
@@ -116,10 +116,12 @@ void loop() {
       break;
 #endif
 
+      /*
     case '8':
       input_one_wire_pin();
       one_wire_scan(one_wire_pin);
       break;
+      */
 
     case '0':
       Serial.println("RESTART ESP");

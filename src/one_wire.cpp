@@ -1,3 +1,5 @@
+#if 0
+
 #include <Arduino.h>
 
 #include <OneWire.h>
@@ -26,3 +28,4 @@ void one_wire_scan(uint8_t pin) {
   }
 }
 
+#endif
